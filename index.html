@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="sun-java6 : Up-to-date Java 6 packages for Debian" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>sun-java6</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rraptorr/sun-java6">View on GitHub</a>
+
+          <h1 id="project_title">sun-java6</h1>
+          <h2 id="project_tagline">Up-to-date Java 6 packages for Debian</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rraptorr/sun-java6/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rraptorr/sun-java6/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Introduction</h3>
+
+<p>Due to licensing problems Java 6 was recently removed from Debian
+testing and Debian stable/oldstable was stuck with Java 6u26. Given
+security updates in later Java versions, this leaves no choice, but
+manual Java update (OpenJDK not being an alternative for many).</p>
+
+<p>I didn't like the idea of installing Java by hand on my Debian
+systems, so I've looked for updated Java packages. As I was unable to
+find ones, I've decided to make my own, so I've pulled latest package
+sources from the Debian Subversion repository and adapted it to the
+latest Java 6.</p>
+
+<h3>Supported Debian versions</h3>
+
+<p>So far packages were tested on following Debian versions:</p>
+
+<ul>
+<li>wheezy i386/amd64</li>
+<li>squeeze i386/amd64</li>
+<li>lenny i386/amd64</li>
+</ul><p>New users of Debian Wheezy should cosider using <a href="http://wiki.debian.org/JavaPackage">java-package</a>.</p>
+
+<p>Packages are compatible with the "official" Debian ones. However, I've
+removed a lot of obsolete code (dating back to etch), licensing stuff
+(since it does not apply anymore) and made general cleanups. For
+details of changes see 'changelog' file.</p>
+
+<p>I do not have resources to test packages on Ubuntu. However, if one
+finds any problem on Ubuntu, feel free to report an issue and I will
+try to resolve it.</p>
+
+<p>For automated solution Ubuntu users can use <a href="https://github.com/flexiondotorg/oab-java6">oab-java6</a>.</p>
+
+<h3>Usage</h3>
+
+<p>To create packages on your own:</p>
+
+<ul>
+<li>apt-get install dpkg-dev</li>
+<li>git clone git://github.com/rraptorr/sun-java6.git</li>
+<li>cd sun-java6</li>
+<li>Download jdk-6u32-linux-i586.bin and jdk-6u32-linux-x64.bin from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>
+(yes, both, no matter which version you will run)</li>
+<li>dpkg-buildpackage -b -uc -us</li>
+<li>install any missing packages that dpkg-buildpackage complains about
+and repeat</li>
+</ul><h3>Legal</h3>
+
+<p>Oracle does not permit to distribute repackaged binaries of Java, so
+be advised that hosting any public repository with Java packages is
+probably illegal (at least in some parts of the world).</p>
+
+<p>On the other hand, this repository contains only scripts, that allows
+one to repackage Oracle Java in Debian friendly way. No binaries are
+or will be hosted.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">sun-java6 maintained by <a href="https://github.com/rraptorr">rraptorr</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3445568-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
